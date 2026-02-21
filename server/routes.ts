@@ -57,9 +57,9 @@ export async function registerRoutes(
   try {
     const existingStudents = await storage.getStudents();
     if (existingStudents.length === 0) {
-      await storage.createStudent({ name: "Alice Johnson", email: "alice@example.com", grade: "10th Grade" });
-      await storage.createStudent({ name: "Bob Smith", email: "bob@example.com", grade: "9th Grade" });
-      await storage.createStudent({ name: "Charlie Davis", email: "charlie@example.com", grade: "11th Grade" });
+      await storage.createStudent({ name: "Alice Johnson", fatherName: "John Johnson", email: "alice@example.com", grade: "10th Grade" });
+      await storage.createStudent({ name: "Bob Smith", fatherName: "Robert Smith", email: "bob@example.com", grade: "9th Grade" });
+      await storage.createStudent({ name: "Charlie Davis", fatherName: "Charles Davis", email: "charlie@example.com", grade: "11th Grade" });
     }
   } catch (error) {
     console.error("Failed to seed database:", error);

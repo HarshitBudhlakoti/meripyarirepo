@@ -25,6 +25,7 @@ export function StudentForm({ onSuccess }: StudentFormProps) {
     resolver: zodResolver(insertStudentSchema),
     defaultValues: {
       name: "",
+      fatherName: "",
       email: "",
       grade: "",
     },
@@ -50,6 +51,20 @@ export function StudentForm({ onSuccess }: StudentFormProps) {
               <FormLabel>Full Name</FormLabel>
               <FormControl>
                 <Input placeholder="John Doe" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="fatherName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Father's Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Robert Doe" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
