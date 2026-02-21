@@ -26,6 +26,8 @@ export function StudentForm({ onSuccess }: StudentFormProps) {
     defaultValues: {
       name: "",
       fatherName: "",
+      motherName: "",
+      brotherName: "",
       email: "",
       grade: "",
     },
@@ -65,6 +67,34 @@ export function StudentForm({ onSuccess }: StudentFormProps) {
               <FormLabel>Father's Name</FormLabel>
               <FormControl>
                 <Input placeholder="Robert Doe" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="motherName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Mother's Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Jane Doe" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="brotherName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Brother's Name</FormLabel>
+              <FormControl>
+                <Input placeholder="Jim Doe" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

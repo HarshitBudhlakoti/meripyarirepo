@@ -121,7 +121,8 @@ export default function Home() {
                 <thead>
                   <tr className="bg-slate-50/50 border-b border-slate-100">
                     <th className="py-5 px-6 font-semibold text-sm text-slate-500 uppercase tracking-wider">Student Name</th>
-                    <th className="py-5 px-6 font-semibold text-sm text-slate-500 uppercase tracking-wider">Father's Name</th>
+                    <th className="py-5 px-6 font-semibold text-sm text-slate-500 uppercase tracking-wider">Parents</th>
+                    <th className="py-5 px-6 font-semibold text-sm text-slate-500 uppercase tracking-wider">Brother</th>
                     <th className="py-5 px-6 font-semibold text-sm text-slate-500 uppercase tracking-wider">Contact</th>
                     <th className="py-5 px-6 font-semibold text-sm text-slate-500 uppercase tracking-wider">Grade</th>
                     <th className="py-5 px-6 font-semibold text-sm text-slate-500 uppercase tracking-wider">Joined</th>
@@ -147,7 +148,13 @@ export default function Home() {
                           </div>
                         </td>
                         <td className="py-4 px-6">
-                          <span className="text-slate-600">{student.fatherName}</span>
+                          <div className="flex flex-col text-sm">
+                            <span className="text-slate-900 font-medium">F: {student.fatherName}</span>
+                            <span className="text-slate-500">M: {student.motherName}</span>
+                          </div>
+                        </td>
+                        <td className="py-4 px-6">
+                          <span className="text-slate-600">{student.brotherName}</span>
                         </td>
                         <td className="py-4 px-6">
                           <div className="flex items-center text-slate-600">
